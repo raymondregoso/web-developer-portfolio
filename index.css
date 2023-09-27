@@ -233,8 +233,6 @@ span {
 	font-size: 15px;
 }
 
-/*Contact me Section End*/
-
 .mb-3 {
 	margin: 10px;
 }
@@ -243,6 +241,63 @@ span {
 	text-align: center;
 	padding-bottom: 3px;
 }
+
+/*Contact me Section End*/
+
+
+
+
+    
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px; 
+    width: 100%;
+}
+
+.modal-content h2 {
+    font-size: 1px;
+    margin-bottom: 1px;
+}
+
+.modal-content p {
+    font-size: 1px;
+}
+
+.close-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.close-button:hover {
+    background-color: #555;
+}
+
+
+
 
 
 

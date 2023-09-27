@@ -148,50 +148,72 @@
                 </div>
                 <!-- Right Column for "Contact Me" -->
                 <div class="col-lg-6 col-xl-6 order-lg-2 order-xl-2">
-                    <form class="card bg-dark text-left text-white">
+                    <form id="infoForm" class="card bg-dark text-left text-white">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
+                            <label for="name">Name:</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                        
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
-                        
                         <div class="mb-3">
-                            <label for="contact" class="form-label">Contact Number</label>
+                            <label for="contact-num">Contact:</label>
                             <input type="number" class="form-control" id="contact" name="contact">
                         </div>
-                  
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="5"></textarea>
                         </div>
                         <div class="email-button">
-                            <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#messageModal">
-                                Email Me
-                            </button>
+                        <button type="submit" class="btn btn-primary mb-2" id="submitBtn">Submit</button>
                         </div>
+                    </form>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-dark" id="exampleModalLabel">Email Sent</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-dark">
-                                        Thank you...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="myModal" class="modal">
+                              <div class="modal-content">
+                                  <h5>Thank you for visiting my page</h5>
+                                  <p>Email received.</p>
+                                  <button id="closeModalButton" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                          </div>
+
+                          <script>
+                              // Get references to the form and modal elements
+                              var infoForm = document.getElementById("infoForm");
+                              var modal = document.getElementById("myModal");
+                              var closeModalButton = document.getElementById("closeModalButton");
+
+                              // Function to open the modal
+                              function openModal() {
+                                  modal.style.display = "block";
+                              }
+
+                              // Function to close the modal
+                              function closeModal() {
+                                  modal.style.display = "none";
+                              }
+
+                              // Function to handle form submission
+                              function handleSubmit(event) {
+                                  event.preventDefault(); // Prevent the form from submitting
+
+                                  // Validate the form fields (you can add more validation as needed)
+                                  var name = document.getElementById("name").value;
+                                  var email = document.getElementById("email").value;
+
+                                  if (name.trim() === "" || email.trim() === "") {
+                                      alert("Please fill out all fields.");
+                                  } else {
+                                      openModal();
+                                  }
+                              }
+
+                              // Attach click event listeners to the close button and form submission
+                              closeModalButton.addEventListener("click", closeModal);
+                              infoForm.addEventListener("submit", handleSubmit);
+                          </script>
                         <!-- Modal End -->
                     </form>
                 </div>
