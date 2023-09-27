@@ -321,7 +321,10 @@ span {
 	}
 	
 	.background-image {
-		background-size: contain;
+    		background-image: url('images/background400.jpg'); 
+    		background-size: cover; 
+    		background-repeat: no-repeat;
+    		background-position: center center;
 	}
 
 	.profilePic img {
@@ -354,7 +357,10 @@ span {
 	}
 	
 	.background-image {
-		background-size: contain;
+    		background-image: url('images/background700.jpg'); 
+    		background-size: cover; 
+    		background-repeat: no-repeat;
+    		background-position: center center;
 	}
 
 
@@ -385,7 +391,10 @@ span {
 	}
 	
 	.background-image {
-		background-size: contain;
+    		background-image: url('images/background700.jpg'); 
+    		background-size: cover; 
+    		background-repeat: no-repeat;
+    		background-position: center center;
 	}
 
 
