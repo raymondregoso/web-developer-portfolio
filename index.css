@@ -19,90 +19,22 @@ span {
 
 
 /*Navbar Start*/
-#navbar {
+#navbar-base {
 	font-size: 20px;
 	font-weight: 600;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-between !important;
 	color: white;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
-.navlinks ul {
-	list-style: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-
-.navlinks li {
-  	margin-right: 20px; 
-}
-
-.navlinks li a {
-  	text-decoration: none;
-  	color: white;
-  	display: block;
-}
-
-.navlinks li:hover {
- 	background-color: darkgray;
- 	border-radius: 4px;
-}
-
-.toggle-button {
-	position: absolute;
-	top: 0.75rem;
-	right: 1rem;
-	display: none;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 21px;
-}
-
-.toggle-button .bar {
-	height: 3px;
-	width: 100%;
-	background-color: white;
+.navbar-nav a:hover {
+	background-color: darkgrey;
 	border-radius: 10px;
 }
 
-
-/*Toggle-button is inactive for a while, because it requires JS code to make it active.*/
-/*Temporary the navbar will disappear or hide in screen 400px*/
-
-@media (max-width: 438px) {
-	.toggle-button {
-		display: flex;
-	}
-
-	.navlinks ul {
-		display: none;    
-		width: 100%;
-	}
-
-	#navbar {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.navlinks ul {
-		width: 100%;
-		flex-direction: column;
-	}
-
-	.navlinks li {
-		text-align: center;
-
-	}
-
-}
-
 /*Navbar End*/
-
-
 
 
 /*Landing Section Start*/
@@ -240,6 +172,13 @@ span {
 .email-button {
 	text-align: center;
 	padding-bottom: 3px;
+}
+
+
+.card {
+	border: 5px solid #ccc; 
+    border-radius: 10px;
+
 }
 
 /*Contact me Section End*/
